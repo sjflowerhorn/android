@@ -2,9 +2,14 @@ lib/libOpenCL.so
 lib/libOpenVG.so
 lib/libclrenderer.so
 lib/libxml.so
-lib/libstillomx.so
+lib/libmmstillomx.so
 lib/libOmxVenc.so
 lib/libOmxVdec.so
+lib/libDxOAF.so
+lib/libfuse.so
+lib/drmfs.so
+
+bin/htcfs
 
 
 #Configuration files
