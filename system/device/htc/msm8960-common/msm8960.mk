@@ -69,11 +69,6 @@ PRODUCT_PACKAGES += \
         libmmcamera_interface
 
 # Graphics
-#PRODUCT_PACKAGES += \
-    hwcomposer.default \
-    hwcomposer.msm8960 \
-    libion
-
 PRODUCT_PACKAGES += \
     copybit.msm8960 \
     gralloc.default \
