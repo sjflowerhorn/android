@@ -1,4 +1,4 @@
-CyanogenMod 10.1 for HTC DLX
+CyanogenMod for HTC DLX
 =======================
 
 First
