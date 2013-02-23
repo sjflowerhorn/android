@@ -1,48 +1,51 @@
-lib/libOpenCL.so
+#lib/libOpenCL.so
 lib/libOpenVG.so
-lib/libclrenderer.so
-lib/libxml.so
-lib/libmmstillomx.so
-lib/libOmxVenc.so
-lib/libOmxVdec.so
-lib/libDxOAF.so
+#lib/libclrenderer.so
+#lib/libxml.so
+#lib/libmmstillomx.so
+#lib/libOmxVenc.so
+#lib/libOmxVdec.so
+#lib/libmm-omxcore.so
+#lib/libaricentomxplugin.so 
+#lib/soundfx/libsrsfx.so
+#lib/libsoundpool.so
+#lib/libDxAndroidSpecific.so
 lib/libfuse.so
-lib/drmfs.so
-
-bin/htcfs
-
+#lib/libhardware_legacy.so
+lib/libCommandSvc.so
+lib/libconfigdb.so
+lib/libqcci_legacy.so
 
 #Configuration files
 etc/agps_rm
 
 # Executable files
 
-bin/adaptive
+#bin/adaptive
 bin/akmd
 bin/ATFWD-daemon
 bin/bridgemgrd
 bin/bma150_usr
 bin/charging
 bin/ds_fmc_appd
+bin/DxDrmServerIpc
 bin/efsks
-bin/hci_qcomm_init
+#bin/hci_qcomm_init
 bin/hcheck
-bin/hdmid
+#bin/hdmid
 bin/ks
 bin/mm-qcamera-daemon
 bin/mpdecision
-bin/mm-pp-daemon
+#bin/mm-pp-daemon
 bin/netmgrd
 bin/nl_listener
 bin/netsharing
-bin/pnpmgr
+bin/port-bridge
 bin/qcks
 bin/qmiproxy
 bin/qmuxd
 bin/qseecomd
 bin/radish
-#bin/sensorservice
-#bin/shutdown
 bin/thermald
 bin/usbhub
 bin/usbhub_init
@@ -53,7 +56,6 @@ bin/v4l2-qcamera-app
 lib/libacdbloader.so
 lib/libaudcal.so
 #lib/libcsd-client.so
-#lib/libbeatscorehtc.so
 
 # Graphics
 lib/libmode10GLES20.so
@@ -73,15 +75,16 @@ lib/egl/libGLESv2_adreno200.so
 lib/egl/libGLESv2S3D_adreno200.so
 lib/egl/libq3dtools_adreno200.so
 lib/libgsl.so
-
+lib/libllvm-a3xx.so
 
 # GPS
 lib/libloc_api_v02.so
 
 
-# Camera  *CONFIRMED*
+# Camera  
 lib/libcameraface.so
-lib/libBeautyChat.so
+lib/libcameraasd.so
+lib/libcamerapp.so
 lib/libcam_oem_plugin.so
 lib/liboemcamera.so
 lib/libOlaEngineNew.so
@@ -89,16 +92,9 @@ lib/libposteffect.so
 lib/libgemini.so
 lib/libmmipl.so
 lib/libmmjpeg.so
-#lib/libmmosal.so
-#lib/libmmparser.so
-#lib/libmmparser_divxdrmlib.so
-#lib/libmmparser_lite.so
 lib/libmmcamera_frameproc.so
 lib/libmmcamera_rawchipproc.so
 lib/libmmcamera_statsproc31.so
-lib/libmmcamera_wavelet_lib.so
-lib/libmmcamera_hdr_lib.so
-lib/libmmcamera_image_stab.so
 
 lib/libchromatix_ar0260_default_video.so
 lib/libchromatix_imx175_hdr.so
@@ -151,29 +147,27 @@ lib/libchromatix_imx175_default_video.so
 lib/libchromatix_s5k3h2yx_hdr.so   
 
 
-#lib/libCommandSvc.so
-#lib/libconfigdb.so
-
-# Media
+# Media libraries
 lib/libmm-color-convertor.so
-lib/libI420colorconvert.so
-lib/libgnmc_aactag.2.5.9.4.so
-lib/libstagefright_soft_aacdec.so
-lib/libstagefright_soft_aacenc.so
+lib/libwvm.so
+lib/libdrmwvmplugin.so
+lib/libwvdrm_L1.so
+lib/libWVStreamControlAPI_L1.so
+
+#lib/libmmmpo.so
+#lib/libmmmpod.so
+#lib/libgnmc_aactag.2.5.9.4.so
+#lib/libstagefright_soft_aacdec.so
+#lib/libstagefright_soft_aacenc.so
 lib/libimage-jpeg-dec-omx-comp.so
 lib/libimage-jpeg-enc-omx-comp.so
 lib/libimage-omx-common.so
-lib/libmmmpo.so
-lib/libmmmpod.so
-
-
-
+#lib/libdrmfs.so
+#lib/libfuse.so
 
 # NFC
 lib/hw/nfc.dlx.so
 lib/libpn544_fw.so
-#lib/libsnfc.so
-#lib/libsnfc_ndef.so
 
 # Qualcomm
 lib/libdiag.so
@@ -188,7 +182,7 @@ lib/libqmi_common_so.so
 lib/libqmi_csi.so
 lib/libqmi_encdec.so
 lib/libqmiservices.so
-#lib/libqmi_client_qmux.so
+lib/libqmi_client_qmux.so
 lib/libQSEEComAPI.so
 
 # Radio
@@ -205,50 +199,36 @@ lib/libimu.so
 lib/libmlplatform.so
 lib/libmllite.so
 lib/libmpl.so
-lib/libmpl_jni.so
-
-
-
-lib/libllvm-a3xx.so
-
-
-lib/libsrsprocessing.so
-lib/libext3-fileio.so
-#lib/libfrsdk.so
-#lib/libfuse.so
-#lib/libgcomm_jni.so
 
 
 # Q6 firmware
-etc/firmware/q6/q6.b00
-etc/firmware/q6/q6.b01
-etc/firmware/q6/q6.b03
-etc/firmware/q6/q6.b04
-etc/firmware/q6/q6.b05
-etc/firmware/q6/q6.b06
-etc/firmware/q6/q6.mdt
-etc/firmware/q6/opendspv.cfg
-etc/firmware/mdm/radiover.cfg
-etc/firmware/mdm/image/acdb.mbn           
-etc/firmware/mdm/image/apps.mbn
-etc/firmware/mdm/image/dsp1.mbn
-etc/firmware/mdm/image/dsp2.mbn
-etc/firmware/mdm/image/dsp3.mbn
-etc/firmware/mdm/image/efs1.mbn
-etc/firmware/mdm/image/efs2.mbn
-etc/firmware/mdm/image/efs3.mbn
-etc/firmware/mdm/image/htccdma.mbn
-etc/firmware/mdm/image/htccnv.mbn
-etc/firmware/mdm/image/htcnvmfg.mbn
-etc/firmware/mdm/image/htcrfnv.mbn
-etc/firmware/mdm/image/htcssmem.mbn
-etc/firmware/mdm/image/htcuserd.mbn
-etc/firmware/mdm/image/mdm_acdb.img
-etc/firmware/mdm/image/rpm.mbn
-etc/firmware/mdm/image/sbl1.mbn
-etc/firmware/mdm/image/sbl2.mbn
-
-
+#etc/firmware/q6/q6.b00
+#etc/firmware/q6/q6.b01
+#etc/firmware/q6/q6.b03
+#etc/firmware/q6/q6.b04
+#etc/firmware/q6/q6.b05
+#etc/firmware/q6/q6.b06
+#etc/firmware/q6/q6.mdt
+#etc/firmware/q6/opendspv.cfg
+#etc/firmware/mdm/radiover.cfg
+#etc/firmware/mdm/image/acdb.mbn           
+#etc/firmware/mdm/image/apps.mbn
+#etc/firmware/mdm/image/dsp1.mbn
+#etc/firmware/mdm/image/dsp2.mbn
+#etc/firmware/mdm/image/dsp3.mbn
+#etc/firmware/mdm/image/efs1.mbn
+#etc/firmware/mdm/image/efs2.mbn
+#etc/firmware/mdm/image/efs3.mbn
+#etc/firmware/mdm/image/htccdma.mbn
+#etc/firmware/mdm/image/htccnv.mbn
+#etc/firmware/mdm/image/htcnvmfg.mbn
+#etc/firmware/mdm/image/htcrfnv.mbn
+#etc/firmware/mdm/image/htcssmem.mbn
+#etc/firmware/mdm/image/htcuserd.mbn
+#etc/firmware/mdm/image/mdm_acdb.img
+#etc/firmware/mdm/image/rpm.mbn
+#etc/firmware/mdm/image/sbl1.mbn
+#etc/firmware/mdm/image/sbl2.mbn
 
 
 # Modem firmware
@@ -291,11 +271,7 @@ etc/firmware/tzapps.mdt
 
 
 vendor/firmware/libpn544_fw.so
-vendor/firmware/mfg.bin
-vendor/lib/libwvm.so
-vendor/lib/libwvdrm_L1.so
-vendor/lib/libWVStreamControlAPI_L1.so
-vendor/lib/drm/libdrmwvmplugin.so
+#vendor/firmware/mfg.bin
 
 
 
