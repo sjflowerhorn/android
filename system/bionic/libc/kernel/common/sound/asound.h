@@ -177,12 +177,7 @@ typedef int __bitwise snd_pcm_format_t;
 #define SNDRV_PCM_FORMAT_U18_3LE ((__force snd_pcm_format_t) 42)  
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_FORMAT_U18_3BE ((__force snd_pcm_format_t) 43)  
-#define SNDRV_PCM_FORMAT_G723_24 ((__force snd_pcm_format_t) 44)  
-#define SNDRV_PCM_FORMAT_G723_24_1B ((__force snd_pcm_format_t) 45)  
-#define SNDRV_PCM_FORMAT_G723_40 ((__force snd_pcm_format_t) 46)  
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
-#define SNDRV_PCM_FORMAT_G723_40_1B ((__force snd_pcm_format_t) 47)  
-#define SNDRV_PCM_FORMAT_LAST SNDRV_PCM_FORMAT_G723_40_1B
+#define SNDRV_PCM_FORMAT_LAST SNDRV_PCM_FORMAT_U18_3BE
 #ifdef SNDRV_LITTLE_ENDIAN
 #define SNDRV_PCM_FORMAT_S16 SNDRV_PCM_FORMAT_S16_LE
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
@@ -232,251 +227,246 @@ typedef int __bitwise snd_pcm_subformat_t;
 #define SNDRV_PCM_INFO_JOINT_DUPLEX 0x00200000  
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_INFO_SYNC_START 0x00400000  
-#define SNDRV_PCM_INFO_NO_PERIOD_WAKEUP 0x00800000  
 #define SNDRV_PCM_INFO_FIFO_IN_FRAMES 0x80000000  
 typedef int __bitwise snd_pcm_state_t;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_STATE_OPEN ((__force snd_pcm_state_t) 0)  
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_STATE_SETUP ((__force snd_pcm_state_t) 1)  
 #define SNDRV_PCM_STATE_PREPARED ((__force snd_pcm_state_t) 2)  
 #define SNDRV_PCM_STATE_RUNNING ((__force snd_pcm_state_t) 3)  
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_STATE_XRUN ((__force snd_pcm_state_t) 4)  
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_STATE_DRAINING ((__force snd_pcm_state_t) 5)  
 #define SNDRV_PCM_STATE_PAUSED ((__force snd_pcm_state_t) 6)  
 #define SNDRV_PCM_STATE_SUSPENDED ((__force snd_pcm_state_t) 7)  
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_STATE_DISCONNECTED ((__force snd_pcm_state_t) 8)  
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_STATE_LAST SNDRV_PCM_STATE_DISCONNECTED
 enum {
  SNDRV_PCM_MMAP_OFFSET_DATA = 0x00000000,
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  SNDRV_PCM_MMAP_OFFSET_STATUS = 0x80000000,
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  SNDRV_PCM_MMAP_OFFSET_CONTROL = 0x81000000,
 };
 union snd_pcm_sync_id {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  unsigned char id[16];
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  unsigned short id16[8];
  unsigned int id32[4];
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct snd_pcm_info {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  unsigned int device;
  unsigned int subdevice;
  int stream;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  int card;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  unsigned char id[64];
  unsigned char name[80];
  unsigned char subname[32];
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  int dev_class;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  int dev_subclass;
  unsigned int subdevices_count;
  unsigned int subdevices_avail;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  union snd_pcm_sync_id sync;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  unsigned char reserved[64];
 };
 typedef int snd_pcm_hw_param_t;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_HW_PARAM_ACCESS 0  
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_HW_PARAM_FORMAT 1  
 #define SNDRV_PCM_HW_PARAM_SUBFORMAT 2  
 #define SNDRV_PCM_HW_PARAM_FIRST_MASK SNDRV_PCM_HW_PARAM_ACCESS
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_HW_PARAM_LAST_MASK SNDRV_PCM_HW_PARAM_SUBFORMAT
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_HW_PARAM_SAMPLE_BITS 8  
 #define SNDRV_PCM_HW_PARAM_FRAME_BITS 9  
 #define SNDRV_PCM_HW_PARAM_CHANNELS 10  
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_HW_PARAM_RATE 11  
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_HW_PARAM_PERIOD_TIME 12  
 #define SNDRV_PCM_HW_PARAM_PERIOD_SIZE 13  
 #define SNDRV_PCM_HW_PARAM_PERIOD_BYTES 14  
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_HW_PARAM_PERIODS 15  
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_HW_PARAM_BUFFER_TIME 16  
 #define SNDRV_PCM_HW_PARAM_BUFFER_SIZE 17  
 #define SNDRV_PCM_HW_PARAM_BUFFER_BYTES 18  
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_HW_PARAM_TICK_TIME 19  
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PCM_HW_PARAM_FIRST_INTERVAL SNDRV_PCM_HW_PARAM_SAMPLE_BITS
 #define SNDRV_PCM_HW_PARAM_LAST_INTERVAL SNDRV_PCM_HW_PARAM_TICK_TIME
 #define SNDRV_PCM_HW_PARAMS_NORESAMPLE (1<<0)  
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
-#define SNDRV_PCM_HW_PARAMS_EXPORT_BUFFER (1<<1)  
-#define SNDRV_PCM_HW_PARAMS_NO_PERIOD_WAKEUP (1<<2)  
 struct snd_interval {
- unsigned int min, max;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int min, max;
  unsigned int openmin:1,
  openmax:1,
  integer:1,
- empty:1;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ empty:1;
 };
 #define SNDRV_MASK_MAX 256
 struct snd_mask {
- __u32 bits[(SNDRV_MASK_MAX+31)/32];
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ __u32 bits[(SNDRV_MASK_MAX+31)/32];
 };
 struct snd_pcm_hw_params {
  unsigned int flags;
- struct snd_mask masks[SNDRV_PCM_HW_PARAM_LAST_MASK -
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ struct snd_mask masks[SNDRV_PCM_HW_PARAM_LAST_MASK -
  SNDRV_PCM_HW_PARAM_FIRST_MASK + 1];
  struct snd_mask mres[5];
  struct snd_interval intervals[SNDRV_PCM_HW_PARAM_LAST_INTERVAL -
- SNDRV_PCM_HW_PARAM_FIRST_INTERVAL + 1];
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ SNDRV_PCM_HW_PARAM_FIRST_INTERVAL + 1];
  struct snd_interval ires[9];
  unsigned int rmask;
  unsigned int cmask;
- unsigned int info;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int info;
  unsigned int msbits;
  unsigned int rate_num;
  unsigned int rate_den;
- snd_pcm_uframes_t fifo_size;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ snd_pcm_uframes_t fifo_size;
  unsigned char reserved[64];
 };
 enum {
- SNDRV_PCM_TSTAMP_NONE = 0,
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ SNDRV_PCM_TSTAMP_NONE = 0,
  SNDRV_PCM_TSTAMP_ENABLE,
  SNDRV_PCM_TSTAMP_LAST = SNDRV_PCM_TSTAMP_ENABLE,
 };
-struct snd_pcm_sw_params {
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+struct snd_pcm_sw_params {
  int tstamp_mode;
  unsigned int period_step;
  unsigned int sleep_min;
- snd_pcm_uframes_t avail_min;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ snd_pcm_uframes_t avail_min;
  snd_pcm_uframes_t xfer_align;
  snd_pcm_uframes_t start_threshold;
  snd_pcm_uframes_t stop_threshold;
- snd_pcm_uframes_t silence_threshold;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ snd_pcm_uframes_t silence_threshold;
  snd_pcm_uframes_t silence_size;
  snd_pcm_uframes_t boundary;
  unsigned char reserved[64];
-};
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+};
 struct snd_pcm_channel_info {
  unsigned int channel;
  __kernel_off_t offset;
- unsigned int first;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int first;
  unsigned int step;
 };
 struct snd_pcm_status {
- snd_pcm_state_t state;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ snd_pcm_state_t state;
  struct timespec trigger_tstamp;
  struct timespec tstamp;
  snd_pcm_uframes_t appl_ptr;
- snd_pcm_uframes_t hw_ptr;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ snd_pcm_uframes_t hw_ptr;
  snd_pcm_sframes_t delay;
  snd_pcm_uframes_t avail;
  snd_pcm_uframes_t avail_max;
- snd_pcm_uframes_t overrange;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ snd_pcm_uframes_t overrange;
  snd_pcm_state_t suspended_state;
  unsigned char reserved[60];
 };
-struct snd_pcm_mmap_status {
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+struct snd_pcm_mmap_status {
  snd_pcm_state_t state;
  int pad1;
  snd_pcm_uframes_t hw_ptr;
- struct timespec tstamp;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ struct timespec tstamp;
  snd_pcm_state_t suspended_state;
 };
 struct snd_pcm_mmap_control {
- snd_pcm_uframes_t appl_ptr;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ snd_pcm_uframes_t appl_ptr;
  snd_pcm_uframes_t avail_min;
 };
 #define SNDRV_PCM_SYNC_PTR_HWSYNC (1<<0)  
-#define SNDRV_PCM_SYNC_PTR_APPL (1<<1)  
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+#define SNDRV_PCM_SYNC_PTR_APPL (1<<1)  
 #define SNDRV_PCM_SYNC_PTR_AVAIL_MIN (1<<2)  
 struct snd_pcm_sync_ptr {
  unsigned int flags;
- union {
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ union {
  struct snd_pcm_mmap_status status;
  unsigned char reserved[64];
  } s;
- union {
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ union {
  struct snd_pcm_mmap_control control;
  unsigned char reserved[64];
  } c;
-};
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+};
 struct snd_xferi {
  snd_pcm_sframes_t result;
  void __user *buf;
- snd_pcm_uframes_t frames;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ snd_pcm_uframes_t frames;
 };
 struct snd_xfern {
  snd_pcm_sframes_t result;
- void __user * __user *bufs;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ void __user * __user *bufs;
  snd_pcm_uframes_t frames;
 };
 enum {
- SNDRV_PCM_TSTAMP_TYPE_GETTIMEOFDAY = 0,
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ SNDRV_PCM_TSTAMP_TYPE_GETTIMEOFDAY = 0,
  SNDRV_PCM_TSTAMP_TYPE_MONOTONIC,
  SNDRV_PCM_TSTAMP_TYPE_LAST = SNDRV_PCM_TSTAMP_TYPE_MONOTONIC,
 };
-#define SNDRV_PCM_IOCTL_PVERSION _IOR('A', 0x00, int)
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+#define SNDRV_PCM_IOCTL_PVERSION _IOR('A', 0x00, int)
 #define SNDRV_PCM_IOCTL_INFO _IOR('A', 0x01, struct snd_pcm_info)
 #define SNDRV_PCM_IOCTL_TSTAMP _IOW('A', 0x02, int)
 #define SNDRV_PCM_IOCTL_TTSTAMP _IOW('A', 0x03, int)
-#define SNDRV_PCM_IOCTL_HW_REFINE _IOWR('A', 0x10, struct snd_pcm_hw_params)
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+#define SNDRV_PCM_IOCTL_HW_REFINE _IOWR('A', 0x10, struct snd_pcm_hw_params)
 #define SNDRV_PCM_IOCTL_HW_PARAMS _IOWR('A', 0x11, struct snd_pcm_hw_params)
 #define SNDRV_PCM_IOCTL_HW_FREE _IO('A', 0x12)
 #define SNDRV_PCM_IOCTL_SW_PARAMS _IOWR('A', 0x13, struct snd_pcm_sw_params)
-#define SNDRV_PCM_IOCTL_STATUS _IOR('A', 0x20, struct snd_pcm_status)
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+#define SNDRV_PCM_IOCTL_STATUS _IOR('A', 0x20, struct snd_pcm_status)
 #define SNDRV_PCM_IOCTL_DELAY _IOR('A', 0x21, snd_pcm_sframes_t)
 #define SNDRV_PCM_IOCTL_HWSYNC _IO('A', 0x22)
 #define SNDRV_PCM_IOCTL_SYNC_PTR _IOWR('A', 0x23, struct snd_pcm_sync_ptr)
-#define SNDRV_PCM_IOCTL_CHANNEL_INFO _IOR('A', 0x32, struct snd_pcm_channel_info)
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+#define SNDRV_PCM_IOCTL_CHANNEL_INFO _IOR('A', 0x32, struct snd_pcm_channel_info)
 #define SNDRV_PCM_IOCTL_PREPARE _IO('A', 0x40)
 #define SNDRV_PCM_IOCTL_RESET _IO('A', 0x41)
 #define SNDRV_PCM_IOCTL_START _IO('A', 0x42)
-#define SNDRV_PCM_IOCTL_DROP _IO('A', 0x43)
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+#define SNDRV_PCM_IOCTL_DROP _IO('A', 0x43)
 #define SNDRV_PCM_IOCTL_DRAIN _IO('A', 0x44)
 #define SNDRV_PCM_IOCTL_PAUSE _IOW('A', 0x45, int)
 #define SNDRV_PCM_IOCTL_REWIND _IOW('A', 0x46, snd_pcm_uframes_t)
-#define SNDRV_PCM_IOCTL_RESUME _IO('A', 0x47)
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+#define SNDRV_PCM_IOCTL_RESUME _IO('A', 0x47)
 #define SNDRV_PCM_IOCTL_XRUN _IO('A', 0x48)
 #define SNDRV_PCM_IOCTL_FORWARD _IOW('A', 0x49, snd_pcm_uframes_t)
 #define SNDRV_PCM_IOCTL_WRITEI_FRAMES _IOW('A', 0x50, struct snd_xferi)
-#define SNDRV_PCM_IOCTL_READI_FRAMES _IOR('A', 0x51, struct snd_xferi)
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+#define SNDRV_PCM_IOCTL_READI_FRAMES _IOR('A', 0x51, struct snd_xferi)
 #define SNDRV_PCM_IOCTL_WRITEN_FRAMES _IOW('A', 0x52, struct snd_xfern)
 #define SNDRV_PCM_IOCTL_READN_FRAMES _IOR('A', 0x53, struct snd_xfern)
 #define SNDRV_PCM_IOCTL_LINK _IOW('A', 0x60, int)
-#define SNDRV_PCM_IOCTL_UNLINK _IO('A', 0x61)
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
-#define SNDRV_PCM_IOCTL_ENABLE_EFFECT _IOW('A', 0x70, int)
+#define SNDRV_PCM_IOCTL_UNLINK _IO('A', 0x61)
 #define SNDRV_RAWMIDI_VERSION SNDRV_PROTOCOL_VERSION(2, 0, 0)
 enum {
  SNDRV_RAWMIDI_STREAM_OUTPUT = 0,
@@ -687,7 +677,7 @@ struct snd_timer_tread {
  unsigned int val;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
-#define SNDRV_CTL_VERSION SNDRV_PROTOCOL_VERSION(2, 0, 7)
+#define SNDRV_CTL_VERSION SNDRV_PROTOCOL_VERSION(2, 0, 6)
 struct snd_ctl_card_info {
  int card;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
@@ -796,125 +786,123 @@ struct snd_ctl_elem_info {
  unsigned int item;
  char name[64];
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
- __u64 names_ptr;
- unsigned int names_length;
  } enumerated;
  unsigned char reserved[128];
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  } value;
  union {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  unsigned short d[4];
  unsigned short *d_ptr;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  } dimen;
  unsigned char reserved[64-4*sizeof(unsigned short)];
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct snd_ctl_elem_value {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  struct snd_ctl_elem_id id;
  unsigned int indirect: 1;
- union {
- union {
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ union {
+ union {
  long value[128];
  long *value_ptr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  } integer;
  union {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  long long value[64];
  long long *value_ptr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  } integer64;
  union {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  unsigned int item[128];
  unsigned int *item_ptr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  } enumerated;
  union {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  unsigned char data[512];
  unsigned char *data_ptr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  } bytes;
  struct snd_aes_iec958 iec958;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  } value;
  struct timespec tstamp;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  unsigned char reserved[128-sizeof(struct timespec)];
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct snd_ctl_tlv {
  unsigned int numid;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  unsigned int length;
  unsigned int tlv[0];
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 #define SNDRV_CTL_IOCTL_PVERSION _IOR('U', 0x00, int)
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_IOCTL_CARD_INFO _IOR('U', 0x01, struct snd_ctl_card_info)
 #define SNDRV_CTL_IOCTL_ELEM_LIST _IOWR('U', 0x10, struct snd_ctl_elem_list)
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_IOCTL_ELEM_INFO _IOWR('U', 0x11, struct snd_ctl_elem_info)
 #define SNDRV_CTL_IOCTL_ELEM_READ _IOWR('U', 0x12, struct snd_ctl_elem_value)
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_IOCTL_ELEM_WRITE _IOWR('U', 0x13, struct snd_ctl_elem_value)
 #define SNDRV_CTL_IOCTL_ELEM_LOCK _IOW('U', 0x14, struct snd_ctl_elem_id)
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_IOCTL_ELEM_UNLOCK _IOW('U', 0x15, struct snd_ctl_elem_id)
 #define SNDRV_CTL_IOCTL_SUBSCRIBE_EVENTS _IOWR('U', 0x16, int)
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_IOCTL_ELEM_ADD _IOWR('U', 0x17, struct snd_ctl_elem_info)
 #define SNDRV_CTL_IOCTL_ELEM_REPLACE _IOWR('U', 0x18, struct snd_ctl_elem_info)
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_IOCTL_ELEM_REMOVE _IOWR('U', 0x19, struct snd_ctl_elem_id)
 #define SNDRV_CTL_IOCTL_TLV_READ _IOWR('U', 0x1a, struct snd_ctl_tlv)
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_IOCTL_TLV_WRITE _IOWR('U', 0x1b, struct snd_ctl_tlv)
 #define SNDRV_CTL_IOCTL_TLV_COMMAND _IOWR('U', 0x1c, struct snd_ctl_tlv)
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_IOCTL_HWDEP_NEXT_DEVICE _IOWR('U', 0x20, int)
 #define SNDRV_CTL_IOCTL_HWDEP_INFO _IOR('U', 0x21, struct snd_hwdep_info)
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_IOCTL_PCM_NEXT_DEVICE _IOR('U', 0x30, int)
 #define SNDRV_CTL_IOCTL_PCM_INFO _IOWR('U', 0x31, struct snd_pcm_info)
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_IOCTL_PCM_PREFER_SUBDEVICE _IOW('U', 0x32, int)
 #define SNDRV_CTL_IOCTL_RAWMIDI_NEXT_DEVICE _IOWR('U', 0x40, int)
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_IOCTL_RAWMIDI_INFO _IOWR('U', 0x41, struct snd_rawmidi_info)
 #define SNDRV_CTL_IOCTL_RAWMIDI_PREFER_SUBDEVICE _IOW('U', 0x42, int)
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_IOCTL_POWER _IOWR('U', 0xd0, int)
 #define SNDRV_CTL_IOCTL_POWER_STATE _IOR('U', 0xd1, int)
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 enum sndrv_ctl_event_type {
  SNDRV_CTL_EVENT_ELEM = 0,
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  SNDRV_CTL_EVENT_LAST = SNDRV_CTL_EVENT_ELEM,
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_EVENT_MASK_VALUE (1<<0)  
 #define SNDRV_CTL_EVENT_MASK_INFO (1<<1)  
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_EVENT_MASK_ADD (1<<2)  
 #define SNDRV_CTL_EVENT_MASK_TLV (1<<3)  
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_EVENT_MASK_REMOVE (~0U)  
 struct snd_ctl_event {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  int type;
  union {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  struct {
  unsigned int mask;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  struct snd_ctl_elem_id id;
  } elem;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  unsigned char data8[60];
  } data;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 #define SNDRV_CTL_NAME_NONE ""
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_NAME_PLAYBACK "Playback "
 #define SNDRV_CTL_NAME_CAPTURE "Capture "
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_NAME_IEC958_NONE ""
 #define SNDRV_CTL_NAME_IEC958_SWITCH "Switch"
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_NAME_IEC958_VOLUME "Volume"
 #define SNDRV_CTL_NAME_IEC958_DEFAULT "Default"
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_NAME_IEC958_MASK "Mask"
 #define SNDRV_CTL_NAME_IEC958_CON_MASK "Con Mask"
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_NAME_IEC958_PRO_MASK "Pro Mask"
 #define SNDRV_CTL_NAME_IEC958_PCM_STREAM "PCM Stream"
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_CTL_NAME_IEC958(expl,direction,what) "IEC958 " expl SNDRV_CTL_NAME_##direction SNDRV_CTL_NAME_IEC958_##what
 #endif
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */

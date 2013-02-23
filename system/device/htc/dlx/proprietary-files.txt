@@ -36,7 +36,6 @@ bin/qmiproxy
 bin/qmuxd
 bin/qseecomd
 bin/radish
-#bin/shutdown
 bin/thermald
 bin/usbhub
 bin/usbhub_init
@@ -46,6 +45,7 @@ bin/v4l2-qcamera-app
 # Audio
 lib/libacdbloader.so
 lib/libaudcal.so
+#lib/libcsd-client.so
 
 # Graphics
 lib/libmode10GLES20.so
@@ -81,10 +81,10 @@ lib/libposteffect.so
 lib/libgemini.so
 lib/libmmipl.so
 lib/libmmjpeg.so
-lib/libmmosal.so
-lib/libmmparser.so
-lib/libmmparser_divxdrmlib.so
-lib/libmmparser_lite.so
+#lib/libmmosal.so
+#lib/libmmparser.so
+#lib/libmmparser_divxdrmlib.so
+#lib/libmmparser_lite.so
 lib/libmmcamera_frameproc.so
 lib/libmmcamera_rawchipproc.so
 lib/libmmcamera_statsproc31.so
@@ -180,7 +180,7 @@ lib/libqmi_common_so.so
 lib/libqmi_csi.so
 lib/libqmi_encdec.so
 lib/libqmiservices.so
-lib/libqmi_client_qmux.so
+#lib/libqmi_client_qmux.so
 lib/libQSEEComAPI.so
 
 # Radio
@@ -201,7 +201,7 @@ lib/libmpl_jni.so
 
 
 
-#lib/libllvm-a3xx.so
+lib/libllvm-a3xx.so
 
 
 #lib/libsrsprocessing.so

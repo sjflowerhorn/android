@@ -55,19 +55,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     alsa.msm8960 \
     audio.a2dp.default \
-    audio_policy.msm8960 \
+    audio_policy.default \
+    audio.primary.default \
     audio.primary.msm8960 \
-    audio.r_submix.default \
-    audio.usb.default \
-    libaudio-resampler
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-    hci_qcomm_init
+    libalsa-intf \
+    libaudioutils
 
 # Camera
 PRODUCT_PACKAGES += \
-   camera.dlx \
+        camera.dlx \
         camera.msm8960 \
         libmmcamera_interface2 \
         libmmcamera_interface
@@ -157,14 +153,16 @@ PRODUCT_COPY_FILES += \
 # Common build properties
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
-    debug.composition.type=dyn \
+    debug.composition.type=gpu \
     debug.enabletr=true \
     ro.hwui.renderer.disable_opaque=true \
     ro.sf.lcd_density=480 \
-    debug.egl.hw=1 \
-    debug.mdpcomp.maxlayer=3 \
-    debug.mdpcomp.logs=0
+    debug.egl.hw=0 \
+    debug.mdpcomp.maxlayer=1 \
+    debug.sf.buffercount=3 \
     debug.sf.hw=1 \
+    dalvik.vm.heapsize=256m \
+    dalvik.vm.heapgrowthlimit=128m \
     lpa.decode=true \
     persist.audio.fluence.mode=endfire \
     persist.audio.vr.enable=false \
@@ -173,9 +171,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.htc.audio.pcm.channels=2
     persist.gps.qmienabled=true \
     persist.thermal.monitor=true \
-    ro.baseband.arch=mdm \
+    ro.baseband.arch=msm \
     ro.opengles.version=131072 \
-    ro.product.wireless=nl80211 \
+    ro.product.wireless=WCN3660 \
     ro.qualcomm.bt.hci_transport=smd \
-    ro.use_data_netmgrd=true \
+    ro.use_data_netmgrd=false \
     wifi.interface=wlan0

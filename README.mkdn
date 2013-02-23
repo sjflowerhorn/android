@@ -46,7 +46,7 @@ cp ~/android/system/kernel/htc/msm8960/arch/arm/configs/apq8064_defconfig dlx_de
 Build
 ----------------------------
 
-. build/envsetup.sh    (THERE IS A PERIOD IN FRONT OF BUILD)
+. build/envsetup.sh
 
 brunch dlx
 

@@ -25,100 +25,82 @@
 # against the traditional rules of inheritance).
 
 # Include path
-TARGET_SPECIFIC_HEADER_PATH 		:= device/htc/msm8960-common/include
+TARGET_SPECIFIC_HEADER_PATH := device/htc/msm8960-common/include
 
-BOARD_VENDOR 				:= htc
+BOARD_VENDOR := htc
 
 # Bootloader
-TARGET_NO_BOOTLOADER 			:= true
-
-# Camera
-#TARGET_PROVIDES_CAMERA_HAL 		:= true
+TARGET_NO_BOOTLOADER := true
 
 # Kernel
-TARGET_KERNEL_SOURCE 			:= kernel/htc/msm8960
+TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 
 # Platform
-TARGET_BOARD_PLATFORM 			:= msm8960
-TARGET_BOARD_PLATFORM_GPU 		:= qcom-adreno320
-TARGET_BOOTLOADER_BOARD_NAME 		:= MONARUDO
-TARGET_BOOTLOADER_NAME 			:= monarudo
+TARGET_BOARD_PLATFORM := msm8960
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno320
+TARGET_BOOTLOADER_BOARD_NAME := MONARUDO
+TARGET_BOOTLOADER_NAME=monarudo
 
 # Architecture
-TARGET_GLOBAL_CFLAGS 			+= -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS 			+= -mfpu=neon -mfloat-abi=softfp
-TARGET_CPU_ABI 				:= armeabi-v7a
-TARGET_CPU_ABI2 			:= armeabi
-TARGET_CPU_SMP 				:= true
-TARGET_ARCH 				:= arm
-TARGET_ARCH_VARIANT 			:= armv7-a-neon
-TARGET_ARCH_VARIANT_CPU			:= cortex-a9
-ARCH_ARM_HAVE_TLS_REGISTER 		:= true
-TARGET_USE_KRAIT_BIONIC_OPTIMIZATION 	:= true
+TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_SMP := true
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+ARCH_ARM_HAVE_TLS_REGISTER := true
+
+#TARGET_CPU_ABI := armeabi-v7a
+#TARGET_CPU_ABI2 := armeabi
+#TARGET_ARCH_VARIANT := armv7-a-neon
+#TARGET_ARCH_VARIANT_CPU := cortex-a9
+#TARGET_CPU_SMP := true
+#TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 
 # Flags
-BOARD_USES_QCOM_HARDWARE 		:= true
-COMMON_GLOBAL_CFLAGS 			+= -DQCOM_HARDWARE
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 
 # Preload bootanimation
-TARGET_BOOTANIMATION_PRELOAD 		:= true
+TARGET_BOOTANIMATION_PRELOAD := true
 
 # QCOM hardware
-BOARD_USES_QCOM_HARDWARE 		:= true
+BOARD_USES_QCOM_HARDWARE := true
 
 # Audio   added in BoardConfig.mk
-BOARD_USES_ALSA_AUDIO 			:= true
-BOARD_HAVE_HTC_AUDIO 			:= true
-BOARD_USES_FLUENCE_INCALL 		:= true
-BOARD_USES_SEPERATED_AUDIO_INPUT 	:= true
+BOARD_USES_ALSA_AUDIO := true
 
 # Bluetooth
-
 BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_QCOM := true
-BLUETOOTH_HCI_USE_MCT := true
+TARGET_CUSTOM_BLUEDROID := ../../../device/htc/msm8960-common/bluetooth/bluetooth.c
 
 # FM radio
 #BOARD_HAVE_QCOM_FM := true
 #COMMON_GLOBAL_CFLAGS += -DQCOM_FM_ENABLED
 
 # QCOM GPS
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
+#BOARD_USES_QCOM_GPS := true
 
 # Graphics
-COMMON_GLOBAL_CFLAGS 			+= -DQCOM_NO_SECURE_PLAYBACK
-TARGET_NO_HW_VSYNC 			:= true
-TARGET_USES_C2D_COMPOSITION 		:= true
-BOARD_EGL_CFG 				:= device/htc/msm8960-common/configs/egl.cfg
-BOARD_EGL_NEEDS_LEGACY_FB 		:= true
-USE_OPENGL_RENDERER 			:= true
-TARGET_USES_ION 			:= true
-TARGET_USES_OVERLAY 			:= true
+COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
+BUILD_EMULATOR_OPENGL := false
+TARGET_NO_HW_VSYNC := true
+TARGET_USES_C2D_COMPOSITION := true
+BOARD_EGL_CFG := device/htc/msm8960-common/configs/egl.cfg
+BOARD_EGL_NEEDS_LEGACY_FB := true
+USE_OPENGL_RENDERER := true
+TARGET_USES_ION := true
+TARGET_USES_OVERLAY := true
+TARGET_USES_SF_BYPASS := true
 
 
-#RIL
-#BOARD_USE_NEW_LIBRIL_HTC := true
-#TARGET_PROVIDES_LIBRIL := vendor/htc/dlx/proprietary/lib/libhtc-ril.so
-BOARD_RIL_CLASS := ../../../device/htc/msm8960-common/libril/HTC8960RIL.java
 
 # Wifi
-BOARD_HAS_QCOM_WLAN 			:= true
-BOARD_WLAN_DEVICE 			:= bcmdhd
-BOARD_WLAN_DEVICE_REV 			:= bcm4334
-BOARD_WPA_SUPPLICANT_DRIVER 		:= NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB 	:= lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-BOARD_HOSTAPD_DRIVER 			:= NL80211
-BOARD_HOSTAPD_PRIVATE_LIB 		:= lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-WIFI_DRIVER_FW_PATH_AP 			:= "/system/etc/firmware/fw_bcm4334_apsta.bin"
-WIFI_DRIVER_FW_PATH_STA 		:= "/system/etc/firmware/fw_bcm4334.bin"
-WIFI_DRIVER_FW_PATH_P2P 		:= "/system/etc/firmware/fw_bcm4334_p2p.bin"
-WIFI_DRIVER_MODULE_NAME 		:= "bcmdhd"
-WIFI_DRIVER_MODULE_PATH 		:= "/system/lib/modules/bcmdhd.ko"
-#WIFI_DRIVER_FW_PATH_PARAM   		:= "/sys/module/bcmdhd/parameters/firmware_path"
-WPA_SUPPLICANT_VERSION 			:= VER_0_8_X
-#WIFI_DRIVER_MODULE_ARG 			:= "firmware_path=/system/etc/firmware/bcmdhd.bin nvram_path=/system/etc/wifi/nvram.txt"
-WIFI_BAND 				:= 802_11_ABG
+WPA_SUPPLICANT_VERSION           := VER_0_8_X
+BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
+BOARD_HOSTAPD_DRIVER             := NL80211
+BOARD_WLAN_DEVICE                := qcwcn
 
 # Webkit
-ENABLE_WEBGL 				:= true 
-TARGET_FORCE_CPU_UPLOAD 		:= true
+ENABLE_WEBGL := true 
+TARGET_FORCE_CPU_UPLOAD := true

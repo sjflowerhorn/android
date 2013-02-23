@@ -20,6 +20,10 @@ PRODUCT_COPY_FILES += \
 	vendor/htc/dlx/proprietary/lib/libmmjpeg.so:obj/lib/libmmjpeg.so
 
 PRODUCT_COPY_FILES += \
+  vendor/htc/dlx/proprietary/lib/libOpenCL.so:system/lib/libOpenCL.so \
+  vendor/htc/dlx/proprietary/lib/libOpenVG.so:system/lib/libOpenVG.so \
+  vendor/htc/dlx/proprietary/lib/libclrenderer.so:system/lib/libclrenderer.so \
+  vendor/htc/dlx/proprietary/lib/libxml.so:system/lib/libxml.so \
   vendor/htc/dlx/proprietary/etc/agps_rm:system/etc/agps_rm \
   vendor/htc/dlx/proprietary/bin/adaptive:system/bin/adaptive \
   vendor/htc/dlx/proprietary/bin/akmd:system/bin/akmd \
@@ -31,11 +35,9 @@ PRODUCT_COPY_FILES += \
   vendor/htc/dlx/proprietary/bin/efsks:system/bin/efsks \
   vendor/htc/dlx/proprietary/bin/hci_qcomm_init:system/bin/hci_qcomm_init \
   vendor/htc/dlx/proprietary/bin/hcheck:system/bin/hcheck \
-  vendor/htc/dlx/proprietary/bin/hdmid:system/bin/hdmid \
   vendor/htc/dlx/proprietary/bin/ks:system/bin/ks \
   vendor/htc/dlx/proprietary/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
   vendor/htc/dlx/proprietary/bin/mpdecision:system/bin/mpdecision \
-  vendor/htc/dlx/proprietary/bin/mm-pp-daemon:system/bin/mm-pp-daemon \
   vendor/htc/dlx/proprietary/bin/netmgrd:system/bin/netmgrd \
   vendor/htc/dlx/proprietary/bin/nl_listener:system/bin/nl_listener \
   vendor/htc/dlx/proprietary/bin/netsharing:system/bin/netsharing \
@@ -135,6 +137,7 @@ PRODUCT_COPY_FILES += \
   vendor/htc/dlx/proprietary/lib/libchromatix_s5k3h2yx_hdr.so:system/lib/libchromatix_s5k3h2yx_hdr.so \
   vendor/htc/dlx/proprietary/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \
   vendor/htc/dlx/proprietary/lib/libI420colorconvert.so:system/lib/libI420colorconvert.so \
+  vendor/htc/dlx/proprietary/lib/libgnmc_aactag.2.5.9.4.so:system/lib/libgnmc_aactag.2.5.9.4.so \
   vendor/htc/dlx/proprietary/lib/libstagefright_soft_aacdec.so:system/lib/libstagefright_soft_aacdec.so \
   vendor/htc/dlx/proprietary/lib/libstagefright_soft_aacenc.so:system/lib/libstagefright_soft_aacenc.so \
   vendor/htc/dlx/proprietary/lib/libimage-jpeg-dec-omx-comp.so:system/lib/libimage-jpeg-dec-omx-comp.so \
@@ -168,35 +171,7 @@ PRODUCT_COPY_FILES += \
   vendor/htc/dlx/proprietary/lib/libmllite.so:system/lib/libmllite.so \
   vendor/htc/dlx/proprietary/lib/libmpl.so:system/lib/libmpl.so \
   vendor/htc/dlx/proprietary/lib/libmpl_jni.so:system/lib/libmpl_jni.so \
-  vendor/htc/dlx/proprietary/lib/libsrsprocessing.so:system/lib/libsrsprocessing.so \
-  vendor/htc/dlx/proprietary/lib/libext3-fileio.so:system/lib/libext3-fileio.so \
-  vendor/htc/dlx/proprietary/etc/firmware/q6/q6.b00:system/etc/firmware/q6/q6.b00 \
-  vendor/htc/dlx/proprietary/etc/firmware/q6/q6.b01:system/etc/firmware/q6/q6.b01 \
-  vendor/htc/dlx/proprietary/etc/firmware/q6/q6.b03:system/etc/firmware/q6/q6.b03 \
-  vendor/htc/dlx/proprietary/etc/firmware/q6/q6.b04:system/etc/firmware/q6/q6.b04 \
-  vendor/htc/dlx/proprietary/etc/firmware/q6/q6.b05:system/etc/firmware/q6/q6.b05 \
-  vendor/htc/dlx/proprietary/etc/firmware/q6/q6.b06:system/etc/firmware/q6/q6.b06 \
-  vendor/htc/dlx/proprietary/etc/firmware/q6/q6.mdt:system/etc/firmware/q6/q6.mdt \
-  vendor/htc/dlx/proprietary/etc/firmware/q6/opendspv.cfg:system/etc/firmware/q6/opendspv.cfg \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/radiover.cfg:system/etc/firmware/mdm/radiover.cfg \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/acdb.mbn:system/etc/firmware/mdm/image/acdb.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/apps.mbn:system/etc/firmware/mdm/image/apps.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/dsp1.mbn:system/etc/firmware/mdm/image/dsp1.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/dsp2.mbn:system/etc/firmware/mdm/image/dsp2.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/dsp3.mbn:system/etc/firmware/mdm/image/dsp3.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/efs1.mbn:system/etc/firmware/mdm/image/efs1.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/efs2.mbn:system/etc/firmware/mdm/image/efs2.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/efs3.mbn:system/etc/firmware/mdm/image/efs3.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/htccdma.mbn:system/etc/firmware/mdm/image/htccdma.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/htccnv.mbn:system/etc/firmware/mdm/image/htccnv.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/htcnvmfg.mbn:system/etc/firmware/mdm/image/htcnvmfg.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/htcrfnv.mbn:system/etc/firmware/mdm/image/htcrfnv.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/htcssmem.mbn:system/etc/firmware/mdm/image/htcssmem.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/htcuserd.mbn:system/etc/firmware/mdm/image/htcuserd.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/mdm_acdb.img:system/etc/firmware/mdm/image/mdm_acdb.img \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/rpm.mbn:system/etc/firmware/mdm/image/rpm.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/sbl1.mbn:system/etc/firmware/mdm/image/sbl1.mbn \
-  vendor/htc/dlx/proprietary/etc/firmware/mdm/image/sbl2.mbn:system/etc/firmware/mdm/image/sbl2.mbn \
+  vendor/htc/dlx/proprietary/lib/libllvm-a3xx.so:system/lib/libllvm-a3xx.so \
   vendor/htc/dlx/proprietary/etc/firmware/BCM4334B0_002.001.013.0488.0604_DLX_WL.hcd:system/etc/firmware/BCM4334B0_002.001.013.0488.0604_DLX_WL.hcd \
   vendor/htc/dlx/proprietary/etc/firmware/fw_bcm4334.bin:system/etc/firmware/fw_bcm4334.bin \
   vendor/htc/dlx/proprietary/etc/firmware/fw_bcm4334_apsta.bin:system/etc/firmware/fw_bcm4334_apsta.bin \
@@ -227,8 +202,7 @@ PRODUCT_COPY_FILES += \
   vendor/htc/dlx/proprietary/etc/firmware/tzapps.mdt:system/etc/firmware/tzapps.mdt \
   vendor/htc/dlx/proprietary/vendor/firmware/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so \
   vendor/htc/dlx/proprietary/vendor/firmware/mfg.bin:system/vendor/firmware/mfg.bin \
-  vendor/htc/dlx/proprietary/lib/libwvm.so:system/lib/libwvm.so \
-  vendor/htc/dlx/proprietary/lib/libwvdrm_L1.so:system/lib/libwvdrm_L1.so \
-  vendor/htc/dlx/proprietary/lib/libWVStreamControlAPI_L1.so:system/lib/libWVStreamControlAPI_L1.so \
-  vendor/htc/dlx/proprietary/lib/libdrmwvmplugin.so:system/lib/libdrmwvmplugin.so \
-  vendor/htc/dlx/proprietary/lib/libxml.so:system/lib/libxml.so
+  vendor/htc/dlx/proprietary/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
+  vendor/htc/dlx/proprietary/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
+  vendor/htc/dlx/proprietary/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
+  vendor/htc/dlx/proprietary/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so
