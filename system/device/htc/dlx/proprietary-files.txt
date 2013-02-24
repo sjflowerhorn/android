@@ -1,12 +1,12 @@
-#lib/libOpenCL.so
+lib/libOpenCL.so
 lib/libOpenVG.so
-#lib/libclrenderer.so
-#lib/libxml.so
-#lib/libmmstillomx.so
-#lib/libOmxVenc.so
-#lib/libOmxVdec.so
-#lib/libmm-omxcore.so
-#lib/libaricentomxplugin.so 
+lib/libclrenderer.so
+lib/libxml.so
+lib/libmmstillomx.so
+lib/libOmxVenc.so
+lib/libOmxVdec.so
+lib/libmm-omxcore.so
+lib/libaricentomxplugin.so 
 #lib/soundfx/libsrsfx.so
 #lib/libsoundpool.so
 #lib/libDxAndroidSpecific.so
@@ -30,9 +30,9 @@ bin/charging
 bin/ds_fmc_appd
 bin/DxDrmServerIpc
 bin/efsks
-#bin/hci_qcomm_init
+bin/hci_qcomm_init
 bin/hcheck
-#bin/hdmid
+bin/hdmid
 bin/ks
 bin/mm-qcamera-daemon
 bin/mpdecision
@@ -55,7 +55,7 @@ bin/v4l2-qcamera-app
 # Audio
 lib/libacdbloader.so
 lib/libaudcal.so
-#lib/libcsd-client.so
+lib/libcsd-client.so
 
 # Graphics
 lib/libmode10GLES20.so
@@ -154,11 +154,11 @@ lib/libdrmwvmplugin.so
 lib/libwvdrm_L1.so
 lib/libWVStreamControlAPI_L1.so
 
-#lib/libmmmpo.so
-#lib/libmmmpod.so
+lib/libmmmpo.so
+lib/libmmmpod.so
 #lib/libgnmc_aactag.2.5.9.4.so
-#lib/libstagefright_soft_aacdec.so
-#lib/libstagefright_soft_aacenc.so
+lib/libstagefright_soft_aacdec.so
+lib/libstagefright_soft_aacenc.so
 lib/libimage-jpeg-dec-omx-comp.so
 lib/libimage-jpeg-enc-omx-comp.so
 lib/libimage-omx-common.so
